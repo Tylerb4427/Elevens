@@ -8,22 +8,32 @@ public class Card
 {
 	public static final String FACES[] = {"ZERO","ACE","TWO","THREE","FOUR",
 			"FIVE","SIX","SEVEN","EIGHT","NINE","TEN","JACK","QUEEN","KING"};
+        
+        String suit;
+        int face;
 
-	//instance variables
-		//String suit
-		//int face
+        public Card(String suit,int face)
+        {
+            this.face=face;
+            this.suit=suit;
+        }
 
-  	//constructors
+	public void setSuit(String suit){
+            this.suit=suit;
+        }
+        public void setFace(int face){
+            this.face=face;
+        }
 
+        public String getSuit(){
+            return suit;
+        }
+        public int getFace(){
+            return face;
+        }
 
-	// modifiers
-		//set methods
-
-
-  	//accessors
-		//get methods
-
-
-  	//toString
+        public String toString(){
+            return FACES[face]+" of "+suit;
+        } 
 
  }
